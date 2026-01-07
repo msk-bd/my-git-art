@@ -2,16 +2,18 @@ name: Git Artwork SVG
 on:
     schedule:
         - cron: '0 0 * * 0'
-    workflow_dispatch: # এই লাইনটি আপনাকে বাটন দেবে কাজ শুরু করার জন্য
+    workflow_dispatch:
 
 jobs:
     build:
         name: Make gitartwork SVG
         runs-on: ubuntu-latest
+        permissions: 
+            contents: write
         steps:
             - uses: actions/checkout@v4
             - uses: jasineri/gitartwork@v1
               with:
-                  user_name: msk-bd
+                  user_name: msk-bd 
                   text: SAKIB
             - uses: jasineri/simple-push-action@v1
