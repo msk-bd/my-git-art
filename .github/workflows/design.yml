@@ -15,5 +15,5 @@ jobs:
             - uses: jasineri/gitartwork@v1
               with:
                   user_name: msk-bd 
-                  text: SAKIB
+                  text: MSK-BD
             - uses: jasineri/simple-push-action@v1
